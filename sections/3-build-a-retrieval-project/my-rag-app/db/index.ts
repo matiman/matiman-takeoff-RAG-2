@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import { factsTable } from "./schema/facts-schema";
+import { documentsTable } from "./schema/documents-schema";
 
 config({ path: ".env.local" });
 
@@ -12,7 +12,7 @@ if (!databaseUrl) {
 }
 
 const dbSchema = {
-    facts: factsTable
+    documents: documentsTable
 };
 
 function initializeDb(url: string) {
